@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PouBeLike.MainPage"
+             Shell.NavBarIsVisible="False">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="tela_de_fundo.jpeg"
+               Aspect="AspectFill"
+               Grid.RowSpan="3"/>
+
+        <Frame BackgroundColor="#b7e3f7"
+               Grid.Row="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </Frame>
+
+        <Frame HorizontalOptions="End"
+               BackgroundColor="green"
+               Grid.Row="1"
+               Padding="0"
+               WidthRequest="60">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+            
+                <ImageButton Source="botao_comida.png"
+                             Grid.Row="0"
+                             Margin="10, 0"/>
+                <ImageButton Source="botao_agua.png"
+                             Grid.Row="1"/>
+                <ImageButton Source="botao_brincar.png"
+                             Grid.Row="2"
+                             Margin="10, 0"/>
+            
+            </Grid>
+                
+               
+        </Frame>
+
+        
+    </Grid>
+
+</ContentPage>

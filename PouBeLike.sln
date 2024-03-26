@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PouBeLike", "PouBeLike\PouBeLike.csproj", "{CBAB8241-A66B-40E4-B715-94A893FE840F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBAB8241-A66B-40E4-B715-94A893FE840F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBAB8241-A66B-40E4-B715-94A893FE840F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBAB8241-A66B-40E4-B715-94A893FE840F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBAB8241-A66B-40E4-B715-94A893FE840F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F7459AE-727F-41E9-8FA3-A56477FA9DF4}
+	EndGlobalSection
+EndGlobal
