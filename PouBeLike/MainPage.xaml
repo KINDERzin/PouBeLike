@@ -6,53 +6,104 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="250"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+         <!-- Tela de fundo -->
         <Image Source="tela_de_fundo.jpeg"
                Aspect="AspectFill"
                Grid.RowSpan="3"/>
 
-        <Frame BackgroundColor="#b7e3f7"
-               Grid.Row="0">
+
+         <!-- Frame Barras -->
+        <Frame x:Name="FrameBarras"
+               BackgroundColor="#b7e3f7"
+               BorderColor="White"
+               Grid.Row="0"
+               Margin="5"
+               HeightRequest="120">
             <Grid>
                 <Grid.RowDefinitions>
-                        <RowDefinition Height="30"/>
-                        <RowDefinition Height="30"/>
-                        <RowDefinition Height="30"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ImageButton Source="icon_fome.png"
+                             Grid.Column="0"
+                             Grid.Row="0"
+                             Margin="2, 5"/>
+                <ProgressBar x:Name="BarraFome"
+                             Progress="0.5"
+                             ProgressColor="#e36d6d"
+                             Grid.Column="1"
+                             Grid.Row="0"
+                             Margin="2, 5"/>
+                <ImageButton Source="icon_sede.png"
+                             Grid.Column="0"
+                             Grid.Row="1"
+                             Margin="2, 5"/>
+                <ProgressBar x:Name="BarraSede"
+                             Progress="0.5"
+                             ProgressColor="#c5f0fa"
+                             Grid.Column="1"
+                             Grid.Row="1"
+                             Margin="2, 5"/>
+                <ImageButton Source="icon_felicidade.png"
+                             Grid.Column="0"
+                             Grid.Row="2"
+                             Margin="2, 5"/>
+                <ProgressBar x:Name="BarraFelicidade"
+                             Progress="0.5"
+                             ProgressColor="#fffce6"
+                             Grid.Column="1"
+                             Grid.Row="2"
+                             Margin="2, 5"/>
             </Grid>
         </Frame>
 
-        <Frame HorizontalOptions="End"
-               BackgroundColor="green"
+         <!-- Frame Interações -->
+        <Frame x:Name="FrameInteracao"
+               BorderColor="White"
+               BackgroundColor="#e9ffe8"
                Grid.Row="1"
+               Margin="5, 100, 5, 0"
                Padding="0"
-               WidthRequest="60">
+               WidthRequest="80"
+               HorizontalOptions="End"
+               VerticalOptions="Center">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
                 </Grid.RowDefinitions>
             
                 <ImageButton Source="botao_comida.png"
                              Grid.Row="0"
-                             Margin="10, 0"/>
+                             Margin="0, 10"/>
                 <ImageButton Source="botao_agua.png"
-                             Grid.Row="1"/>
+                             Grid.Row="1"
+                             Margin="0, 10"/>
                 <ImageButton Source="botao_brincar.png"
                              Grid.Row="2"
-                             Margin="10, 0"/>
+                             Margin="0, 10"/>
             
             </Grid>
                 
                
         </Frame>
 
-        
+         <!-- Imagem animal -->
+        <Image Source="capybara.png"
+               Grid.Row="2"
+               VerticalOptions="End"
+               HorizontalOptions="Center"/>
     </Grid>
 
 </ContentPage>
