@@ -6,7 +6,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="160"/>
+            <RowDefinition Height="200"/>
             <RowDefinition Height="250"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -19,11 +19,11 @@
 
          <!-- Frame Barras -->
         <Frame x:Name="FrameBarras"
-               BackgroundColor="#b7e3f7"
+               BackgroundColor="#88b7e3f7"
                BorderColor="White"
                Grid.Row="0"
                Margin="5"
-               HeightRequest="120">
+               HeightRequest="160">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
@@ -67,39 +67,54 @@
             </Grid>
         </Frame>
 
-         <!-- Frame Interações -->
-        <Frame x:Name="FrameInteracao"
-               BorderColor="White"
-               BackgroundColor="#e9ffe8"
-               Grid.Row="1"
-               Margin="5, 100, 5, 0"
-               Padding="0"
-               WidthRequest="80"
-               HorizontalOptions="End"
-               VerticalOptions="Center">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="70"/>
-                    <RowDefinition Height="70"/>
-                    <RowDefinition Height="70"/>
-                </Grid.RowDefinitions>
-            
-                <ImageButton Source="botao_comida.png"
-                             Grid.Row="0"
-                             Margin="0, 10"/>
-                <ImageButton Source="botao_agua.png"
-                             Grid.Row="1"
-                             Margin="0, 10"/>
-                <ImageButton Source="botao_brincar.png"
-                             Grid.Row="2"
-                             Margin="0, 10"/>
-            
-            </Grid>
-                
-               
-        </Frame>
+        <HorizontalStackLayout HorizontalOptions="End"
+                               VerticalOptions="Center"
+                               Grid.Row="1">
 
-         <!-- Imagem animal -->
+            <Label Text="Sir Capivonso"
+                   TextColor="Black"
+                   FontSize="20"
+                   Margin="100, 0"
+                   VerticalOptions="Center"/>
+
+            <!-- Frame Interações -->
+            <Frame x:Name="FrameInteracao"
+                   BorderColor="White"
+                   BackgroundColor="#88e9ffe8"
+                   Margin="5, 100, 5, 0"
+                   Padding="0"
+                   WidthRequest="80"
+                   HorizontalOptions="End"
+                   VerticalOptions="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+
+                    <ImageButton Source="botao_troca_pet.png"
+                                    Grid.Row="0"
+                                    Margin="0, 10"/>
+                    <ImageButton Source="botao_comida.png"
+                                Grid.Row="1"
+                                Margin="0, 10"/>
+                    <ImageButton Source="botao_agua.png"
+                                Grid.Row="2"
+                                Margin="0, 10"/>
+                    <ImageButton Source="botao_brincar.png"
+                                Grid.Row="3"
+                                Margin="0, 10"/>
+                
+                </Grid>
+                    
+                
+            </Frame>
+
+        </HorizontalStackLayout>
+         
+        <!-- Imagem animal -->
         <Image Source="capybara.png"
                Grid.Row="2"
                VerticalOptions="End"
