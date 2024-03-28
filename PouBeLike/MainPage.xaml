@@ -95,17 +95,21 @@
                     </Grid.RowDefinitions>
 
                     <ImageButton Source="botao_troca_pet.png"
-                                    Grid.Row="0"
-                                    Margin="0, 10"/>
+                                 Grid.Row="0"
+                                 Margin="0, 10"
+                                 Clicked="ClicouBotaoTrocaPet"/>
                     <ImageButton Source="botao_comida.png"
-                                Grid.Row="1"
-                                Margin="0, 10"/>
+                                 Grid.Row="1"
+                                 Margin="0, 10"
+                                 Clicked="ClicouBotaoComida"/>
                     <ImageButton Source="botao_agua.png"
-                                Grid.Row="2"
-                                Margin="0, 10"/>
+                                 Grid.Row="2"
+                                 Margin="0, 10"
+                                 Clicked="ClicouBotaoAgua"/>
                     <ImageButton Source="botao_brincar.png"
-                                Grid.Row="3"
-                                Margin="0, 10"/>
+                                 Grid.Row="3"
+                                 Margin="0, 10"
+                                 Clicked="ClicouBotaoBrincar"/>
                 
                 </Grid>
                     
