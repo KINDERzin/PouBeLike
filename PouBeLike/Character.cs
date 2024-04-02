@@ -5,6 +5,7 @@ public class Character
     double Sede;
     double Fome;
     double Felicidade;
+    protected string FotoPersonagem; 
 
 //------------------------------------------------------------
 
@@ -17,6 +18,13 @@ public class Character
 
 //------------------------------------------------------------
 
+    public string GetArquivo()
+    {
+        return FotoPersonagem;
+    }
     
+//------------------------------------------------------------
+
+
 
 }

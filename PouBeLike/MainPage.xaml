@@ -92,22 +92,27 @@
                         <RowDefinition Height="70"/>
                         <RowDefinition Height="70"/>
                         <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
                     </Grid.RowDefinitions>
 
-                    <ImageButton Source="botao_troca_pet.png"
+                    <ImageButton Source="botao_seta_direita.png"
                                  Grid.Row="0"
                                  Margin="0, 10"
-                                 Clicked="ClicouBotaoTrocaPet"/>
-                    <ImageButton Source="botao_comida.png"
+                                 Clicked="ClicouBotaoSetaDireita"/>
+                    <ImageButton Source="botao_seta_esquerda.png"
                                  Grid.Row="1"
+                                 Margin="0, 10"
+                                 Clicked="ClicouBotaoSetaEsquerda"/>
+                    <ImageButton Source="botao_comida.png"
+                                 Grid.Row="2"
                                  Margin="0, 10"
                                  Clicked="ClicouBotaoComida"/>
                     <ImageButton Source="botao_agua.png"
-                                 Grid.Row="2"
+                                 Grid.Row="3"
                                  Margin="0, 10"
                                  Clicked="ClicouBotaoAgua"/>
                     <ImageButton Source="botao_brincar.png"
-                                 Grid.Row="3"
+                                 Grid.Row="4"
                                  Margin="0, 10"
                                  Clicked="ClicouBotaoBrincar"/>
                 
@@ -119,7 +124,7 @@
         </HorizontalStackLayout>
          
         <!-- Imagem animal -->
-        <Image Source="capybara.png"
+        <Image x:Name="ImagemAnimal"
                Grid.Row="2"
                VerticalOptions="End"
                HorizontalOptions="Center"/>
