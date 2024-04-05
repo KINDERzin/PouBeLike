@@ -44,26 +44,26 @@ public partial class MainPage : ContentPage
 
 	void PassouTempo()
 	{
-		Atual.SetFome(Atual.GetFome() - 0.1);
+		Atual.SetFome(Atual.GetFome() - 0.01);
 		BarraFome.Progress = Atual.GetFome();
 
-		Atual.SetSede(Atual.GetSede() - 0.1);
+		Atual.SetSede(Atual.GetSede() - 0.0001);
 		BarraSede.Progress = Atual.GetSede();
 
-		Atual.SetFelicidade(Atual.GetFelicidade() - 0.1);
+		Atual.SetFelicidade(Atual.GetFelicidade() - 0.0001);
 		BarraFelicidade.Progress = Atual.GetFelicidade();
 
-		SirCapivaldo.SetFome(SirCapivaldo.GetFome() - 0.1);
-		SirCapivaldo.SetSede(SirCapivaldo.GetSede() - 0.1);
-		SirCapivaldo.SetFelicidade(SirCapivaldo.GetFelicidade() - 0.1);
+		SirCapivaldo.SetFome(SirCapivaldo.GetFome() - 0.01);
+		SirCapivaldo.SetSede(SirCapivaldo.GetSede() - 0.0001);
+		SirCapivaldo.SetFelicidade(SirCapivaldo.GetFelicidade() - 0.0001);
 
-		Orengotengo.SetFome(Orengotengo.GetFome() - 0.1);
-		Orengotengo.SetSede(Orengotengo.GetSede() - 0.1);
-		Orengotengo.SetFelicidade(Orengotengo.GetFelicidade() - 0.1);
+		Orengotengo.SetFome(Orengotengo.GetFome() - 0.01);
+		Orengotengo.SetSede(Orengotengo.GetSede() - 0.0001);
+		Orengotengo.SetFelicidade(Orengotengo.GetFelicidade() - 0.0001);
 
-		Douglas.SetFome(Douglas.GetFome() - 0.1);
-		Douglas.SetSede(Douglas.GetSede() - 0.1);
-		Douglas.SetFelicidade(Douglas.GetFelicidade() - 0.1);
+		Douglas.SetFome(Douglas.GetFome() - 0.01);
+		Douglas.SetSede(Douglas.GetSede() - 0.0001);
+		Douglas.SetFelicidade(Douglas.GetFelicidade() - 0.0001);
 	}
 
 //------------------------------------------------------------
@@ -78,9 +78,12 @@ public partial class MainPage : ContentPage
 
 		else if(Atual == Douglas)
 			Atual = SirCapivaldo;
+
+		
 		
 		ImagemAnimal.Source = Atual.GetArquivo();
 		LabelNome.Text = Atual.GetNomePersonagem();
+
 	}
 
 	private void ClicouBotaoSetaEsquerda(object sender, EventArgs args) 
