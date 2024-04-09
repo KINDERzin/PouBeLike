@@ -11,15 +11,17 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-         <!-- Tela de fundo -->
+<!--======================================================================================================-->
+
         <Image Source="tela_de_fundo.jpeg"
                Aspect="AspectFill"
                Grid.RowSpan="3"/>
 
-
-         <!-- Frame Barras -->
+<!--======================================================================================================-->
+       
         <Frame x:Name="FrameBarras"
                BackgroundColor="#88b7e3f7"
+               IsVisible = "true"
                BorderColor="White"
                Grid.Row="0"
                Margin="5"
@@ -67,6 +69,8 @@
             </Grid>
         </Frame>
 
+<!--======================================================================================================-->
+
         <HorizontalStackLayout HorizontalOptions="End"
                                VerticalOptions="Center"
                                Grid.Row="1">
@@ -78,7 +82,6 @@
                    HorizontalTextAlignment="Center"
                    VerticalOptions="Center"/>
 
-            <!-- Frame Interações -->
             <Frame x:Name="FrameInteracao"
                    BorderColor="White"
                    BackgroundColor="#88e9ffe8"
@@ -116,15 +119,12 @@
                                  Grid.Row="4"
                                  Margin="0, 10"
                                  Clicked="ClicouBotaoBrincar"/>
-                
                 </Grid>
-                    
-                
             </Frame>
-
         </HorizontalStackLayout>
          
-        <!-- Imagem animal -->
+<!--======================================================================================================-->
+
         <Image x:Name="ImagemAnimal"
                Grid.Row="2"
                VerticalOptions="End"

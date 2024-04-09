@@ -1,4 +1,6 @@
-﻿namespace PouBeLike;
+﻿using Microsoft.Maui.Controls;
+
+namespace PouBeLike;
 
 public partial class MainPage : ContentPage
 {
@@ -44,26 +46,41 @@ public partial class MainPage : ContentPage
 
 	void PassouTempo()
 	{
-		Atual.SetFome(Atual.GetFome() - 0.01);
+		if(Atual.GetAnimalMorto())
+		{
+			FrameBarras.IsVisible = false;
+			FrameInteracao.IsVisible = false;
+		}
+			
+
+		else	
+		{
+			FrameBarras.IsVisible = true;
+			FrameInteracao.IsVisible = true;
+		}
+			
+			
+
+		Atual.SetFome(Atual.GetFome() - 0.1);
 		BarraFome.Progress = Atual.GetFome();
 
-		Atual.SetSede(Atual.GetSede() - 0.0001);
+		Atual.SetSede(Atual.GetSede() - 0.01);
 		BarraSede.Progress = Atual.GetSede();
 
-		Atual.SetFelicidade(Atual.GetFelicidade() - 0.0001);
+		Atual.SetFelicidade(Atual.GetFelicidade() - 0.01);
 		BarraFelicidade.Progress = Atual.GetFelicidade();
 
 		SirCapivaldo.SetFome(SirCapivaldo.GetFome() - 0.01);
 		SirCapivaldo.SetSede(SirCapivaldo.GetSede() - 0.0001);
-		SirCapivaldo.SetFelicidade(SirCapivaldo.GetFelicidade() - 0.0001);
+		SirCapivaldo.SetFelicidade(SirCapivaldo.GetFelicidade() - 0.00001);
 
 		Orengotengo.SetFome(Orengotengo.GetFome() - 0.01);
 		Orengotengo.SetSede(Orengotengo.GetSede() - 0.0001);
-		Orengotengo.SetFelicidade(Orengotengo.GetFelicidade() - 0.0001);
+		Orengotengo.SetFelicidade(Orengotengo.GetFelicidade() - 0.00001);
 
 		Douglas.SetFome(Douglas.GetFome() - 0.01);
 		Douglas.SetSede(Douglas.GetSede() - 0.0001);
-		Douglas.SetFelicidade(Douglas.GetFelicidade() - 0.0001);
+		Douglas.SetFelicidade(Douglas.GetFelicidade() - 0.00001);
 	}
 
 //------------------------------------------------------------

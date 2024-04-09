@@ -8,7 +8,7 @@ public class Character
     protected string FotoPersonagem; 
     protected string TelaMorte;
     protected string NomePersonagem;
-    bool AnimalMorto;
+    protected bool AnimalMorto;
 
 //------------------------------------------------------------
 
@@ -76,18 +76,25 @@ public class Character
         return Felicidade;
     }
 
+    public bool GetAnimalMorto()
+    {
+        if(Sede <= 0 || Fome <= 0 || Felicidade <= 0)
+            return true;
+        
+        else   
+            return false;
+    }
+
 //------------------------------------------------------------
 
     public string GetArquivo()
     {
-        if(AnimalMorto == true)
-            return TelaMorte;
-
-        else
-            return FotoPersonagem;
-
+            if(AnimalMorto == true)
+                return TelaMorte;
+            
+            else    
+                return FotoPersonagem;
     }
-
 //------------------------------------------------------------
 
     public string GetNomePersonagem()
