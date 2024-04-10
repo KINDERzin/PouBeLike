@@ -11,13 +11,47 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-<!--======================================================================================================-->
+<!--==============================Tela De Fundo===========================================================-->
 
         <Image Source="tela_de_fundo.jpeg"
                Aspect="AspectFill"
+               Grid.Row="0"
                Grid.RowSpan="3"/>
 
-<!--======================================================================================================-->
+<!--================================Frame Morte==========================================================-->
+
+    <Frame x:Name="FrameMorte"
+           Grid.Row="0"
+           
+           Grid.RowSpan="3"
+           IsVisible="False"
+           BackgroundColor="#c5c7c5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Você morreu"
+                   TextColor="Black"
+                   FontSize="30"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="0"/>
+
+            <Image Source="tela_de_morte.png"
+                   Grid.Row="1"/>
+
+            <Button Text="Reiniciar"
+                    TextColor="Black"
+                    FontSize="18"
+                    BackgroundColor="#f9fcd7"
+                    Grid.Row="2"
+                    Clicked="ClicouBotaoReiniciar"/>
+        </Grid>
+    </Frame>
+
+<!--================================Frame Barras==========================================================-->
        
         <Frame x:Name="FrameBarras"
                BackgroundColor="#88b7e3f7"
@@ -69,7 +103,7 @@
             </Grid>
         </Frame>
 
-<!--======================================================================================================-->
+<!--=======================Frame Botoes======================================================================-->
 
         <HorizontalStackLayout HorizontalOptions="End"
                                VerticalOptions="Center"
@@ -85,6 +119,7 @@
             <Frame x:Name="FrameInteracao"
                    BorderColor="White"
                    BackgroundColor="#88e9ffe8"
+                   
                    Margin="5, 10, 5, 0"
                    Padding="0"
                    WidthRequest="80"
@@ -123,12 +158,11 @@
             </Frame>
         </HorizontalStackLayout>
          
-<!--======================================================================================================-->
+<!--==========================Imagem Animal==================================================================-->
 
         <Image x:Name="ImagemAnimal"
                Grid.Row="2"
                VerticalOptions="End"
                HorizontalOptions="Center"/>
     </Grid>
-
 </ContentPage>

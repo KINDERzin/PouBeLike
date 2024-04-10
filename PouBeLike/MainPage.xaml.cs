@@ -1,9 +1,11 @@
 ﻿using Microsoft.Maui.Controls;
+using Windows.ApplicationModel.VoiceCommands;
 
 namespace PouBeLike;
 
 public partial class MainPage : ContentPage
 {
+	IDispatcherTimer timer;
 	Capybara SirCapivaldo;
 	Orangotango Orengotengo;
 	Duck Douglas; 
@@ -13,33 +15,51 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	
-//------------------------------------------------------------
 
-		var timer = Application.Current.Dispatcher.CreateTimer();
+		timer = Application.Current.Dispatcher.CreateTimer();
 		timer.Interval = TimeSpan.FromSeconds(1);
 		timer.Tick += (s, e) => PassouTempo();
-		timer.Start();
+			
+		Iniciar();
+
+	}
+
+	void Iniciar()
+		{
+			SirCapivaldo = new Capybara();
+			Orengotengo = new Orangotango();
+			Douglas = new Duck();
+
+			Atual = SirCapivaldo;
+			ImagemAnimal.Source = Atual.GetArquivo();
+			LabelNome.Text = Atual.GetNomePersonagem();
+
+			Atual.SetSede(0.5);
+			Atual.SetFome(0.5);
+			Atual.SetFelicidade(0.5);
+			
+			timer.Start();
+		}
 
 //------------------------------------------------------------
 
+	void ClicouBotaoReiniciar(object sender, EventArgs args)
+	{
 		SirCapivaldo = new Capybara();
 		Orengotengo = new Orangotango();
 		Douglas = new Duck();
 
-//------------------------------------------------------------
-
-
-		Atual = SirCapivaldo;
-		ImagemAnimal.Source = Atual.GetArquivo();
+		FrameBarras.IsVisible = true;
+		FrameInteracao.IsVisible = true;
+		FrameMorte.IsVisible = false;
 		LabelNome.Text = Atual.GetNomePersonagem();
-
-//------------------------------------------------------------
-
-
+		ImagemAnimal.Source = Atual.GetArquivo();
+		
 		Atual.SetSede(0.5);
 		Atual.SetFome(0.5);
 		Atual.SetFelicidade(0.5);
 
+		Iniciar();
 	}
 
 //------------------------------------------------------------
@@ -50,6 +70,11 @@ public partial class MainPage : ContentPage
 		{
 			FrameBarras.IsVisible = false;
 			FrameInteracao.IsVisible = false;
+			FrameMorte.IsVisible= true;
+			LabelNome.Text = "";
+			ImagemAnimal.Source = "";
+			timer.Stop();
+			
 		}
 			
 
@@ -57,18 +82,14 @@ public partial class MainPage : ContentPage
 		{
 			FrameBarras.IsVisible = true;
 			FrameInteracao.IsVisible = true;
+			FrameMorte.IsVisible = false;
+			LabelNome.Text = Atual.GetNomePersonagem();
+			ImagemAnimal.Source = Atual.GetArquivo();
+			
 		}
 			
 			
 
-		Atual.SetFome(Atual.GetFome() - 0.1);
-		BarraFome.Progress = Atual.GetFome();
-
-		Atual.SetSede(Atual.GetSede() - 0.01);
-		BarraSede.Progress = Atual.GetSede();
-
-		Atual.SetFelicidade(Atual.GetFelicidade() - 0.01);
-		BarraFelicidade.Progress = Atual.GetFelicidade();
 
 		SirCapivaldo.SetFome(SirCapivaldo.GetFome() - 0.01);
 		SirCapivaldo.SetSede(SirCapivaldo.GetSede() - 0.0001);
@@ -81,6 +102,11 @@ public partial class MainPage : ContentPage
 		Douglas.SetFome(Douglas.GetFome() - 0.01);
 		Douglas.SetSede(Douglas.GetSede() - 0.0001);
 		Douglas.SetFelicidade(Douglas.GetFelicidade() - 0.00001);
+
+		
+		BarraFome.Progress = Atual.GetFome();
+		BarraSede.Progress = Atual.GetSede();
+		BarraFelicidade.Progress = Atual.GetFelicidade();
 	}
 
 //------------------------------------------------------------

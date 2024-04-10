@@ -78,7 +78,7 @@ public class Character
 
     public bool GetAnimalMorto()
     {
-        if(Sede <= 0 || Fome <= 0 || Felicidade <= 0)
+        if(Sede <= 0.1 || Fome <= 0.1 || Felicidade <= 0.1)
             return true;
         
         else   
