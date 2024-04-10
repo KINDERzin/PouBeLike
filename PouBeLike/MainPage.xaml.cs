@@ -34,9 +34,17 @@ public partial class MainPage : ContentPage
 			ImagemAnimal.Source = Atual.GetArquivo();
 			LabelNome.Text = Atual.GetNomePersonagem();
 
-			Atual.SetSede(0.5);
-			Atual.SetFome(0.5);
-			Atual.SetFelicidade(0.5);
+			SirCapivaldo.SetSede(0.5);
+			SirCapivaldo.SetFome(0.5);
+			SirCapivaldo.SetFelicidade(0.5);
+
+			Orengotengo.SetSede(0.5);
+			Orengotengo.SetFome(0.5);
+			Orengotengo.SetFelicidade(0.5);
+
+			Douglas.SetSede(0.5);
+			Douglas.SetFome(0.5);
+			Douglas.SetFelicidade(0.5);
 			
 			timer.Start();
 		}
